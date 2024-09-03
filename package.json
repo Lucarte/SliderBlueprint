@@ -1,5 +1,5 @@
 {
-	"name": "blogblueprint",
+	"name": "sliderblueprint",
 	"private": true,
 	"version": "0.0.0",
 	"type": "module",
@@ -10,6 +10,7 @@
 	},
 	"devDependencies": {
 		"sass-embedded": "^1.77.8",
-		"vite": "^5.4.1"
+		"vite": "^5.4.1",
+		"vite-plugin-static-copy": "^1.0.6"
 	}
 }
