@@ -1,0 +1,488 @@
+// ******************************************************************** ////////////////////////// ********************************************************************
+// ************************************************************************ //// VARIABLES //// **********************************************************************
+// ******************************************************************** ////////////////////////// ********************************************************************
+
+// colors
+$primary-color: #f25430 // rgba(242, 84, 48, 1) for opacity just add another number: rgba(242, 84, 48, 1, 0.5) for example.
+$secondary-color: #011140 // rgba(1, 17, 64, 1)
+
+// font-default has 400 weight
+$font-default: 'Avenir Next LT Pro', 'Merriweather', sans-serif
+$avenir-light: 275 // Avenir Next LT Pro 275
+$avenir-medium: 500 // Avenir Next LT Pro 500
+$avenir-demi: 700 // Avenir Next LT Pro 700
+$avenir-bold: 900 // Avenir Next LT Pro 900
+
+$font-kunst: 'Blakely', sans-serif // default weight 300
+$blakely-bold: 700
+$blakely-heavy: 800
+
+// ******************************************************************** ////////////////////////// ********************************************************************
+// ************************************************************************ ///// GLOBAL ///// ************************************************************************
+// ******************************************************************** ////////////////////////// ********************************************************************
+
+*
+  box-sizing: border-box
+
+//-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ ACCESSIBILITY
+
+input:focus,
+a:focus,
+button:focus
+  outline: 4px double transparent
+
+//-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/-/ RESETTER   
+
+// http://meyerweb.com/eric/tools/css/reset/ 
+// v2.0 | 20110126
+// License: none (public domain)
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section
+  display: block
+
+body
+  line-height: 1
+
+ol,
+ul
+  list-style: none
+
+blockquote,
+q
+  quotes: none
+
+blockquote
+
+  &:before,
+  &:after
+    content: ''
+    content: none
+
+q
+  &:before,
+  &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+
+body
+  background-color: $primary-color
+  width: 100%
+  font-size: 1rem
+
+a:hover
+  cursor: pointer
+
+// ******************************************************************** ////////// INTRO ///////// ********************************************************************
+// ********************************************************************* // SLIDESHOW 7 SUMMITS// ************************************************************************
+// ******************************************************************** ////////////////////////// ********************************************************************
+
+$color_1: aqua
+$color_2: lightcoral
+$color_3: whitesmoke
+$background-color_1: black
+
+.body-introSlider
+  background-color: $background-color_1
+  color: $color_1
+  border: solid 1rem whitesmoke
+  margin: 3rem
+  padding: 2rem
+  display: flex
+  flex-direction: column
+  align-items: center
+  min-height: calc(100vh - 6rem)
+  width: calc(100% - 6rem)
+  @media screen and (min-width: 768px)
+    justify-content: flex-start
+    gap: 3rem
+    height: calc(100% - 6rem)
+
+  h2
+    text-align: center
+    margin: 4rem
+    color: $color_1
+    font-size: 2rem
+
+    div
+      display: flex
+      flex-wrap: wrap
+      justify-content: center
+      max-width: 4rem
+      @media screen and (min-width: 620px)
+        max-width: none
+    &:hover
+      color: $color_2
+      transition: 1s
+
+    .title__span
+      color: $color_3
+      font-size: 1.3rem
+      margin-right: 10px
+      margin-left: 10px
+      text-decoration: underline
+      &:hover
+        cursor: pointer
+        font-size: 2rem
+        transition: 1s
+
+  .span--punkt
+    color: $color_3
+
+  .btn
+    text-decoration: none
+
+    /* no me sirve la animacion para que aparezca despacio y cambie de color */
+  .peaks__span:hover
+    span
+      display: none
+
+    &:hover:after
+      color: $color_2
+      line-height: 2rem
+      transition-duration: 1s
+
+  .peaks__span--everest
+    &:hover
+      &:after
+        display: flex
+        max-width: 14rem
+        content: 'function Asia (EVEREST) => () if click == (1): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence'
+        transition-duration: 2s
+
+  .peaks__span--aconcagua
+    &:hover
+      &:after
+        display: flex
+        max-width: 14rem
+        content: 'function South America (ACONCAGUA) => () if click == (2): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence '
+
+  .peaks__span--denali
+    &:hover
+      &:after
+        display: flex
+        max-width: 14rem
+        content: 'function North America (DENALI) => () if click == (3): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence '
+
+  .peaks__span--elbrus
+    &:hover
+      &:after
+        display: flex
+        max-width: 14rem
+        content: 'function Europe (ELBRUS) => () if click == (4): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence '
+
+  .peaks__span--kili
+    &:hover
+      &:after
+        display: flex
+        max-width: 14rem
+        content: 'function Africa (KILIMANJARO) => () if click == (5): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence '
+
+  .peaks__span--vinson
+    &:hover
+      &:after
+        display: flex
+        max-width: 14rem
+        content: 'function Antarctic (VINSON) => () if click == (6): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence '
+
+  .peaks__span--kosciuszko
+    &:hover
+      &:after
+        display: flex
+        max-width: 14rem
+        content: 'function Australia (KOSCIUSZKO) => () if click == (7): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence '
+
+  .peaks
+    width: calc(100vw - 8rem)
+    background: #000
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    .height
+      padding: 5rem
+
+// ******************************************************************** ////////////////////////// ********************************************************************
+// ********************************************************************* // SLIDESHOW 7 SUMMITS// ************************************************************************
+// ******************************************************************** ////////////////////////// ********************************************************************
+
+.body-slider
+  background-color: $color_2
+  display: flex
+  justify-content: center
+
+  #exitBtn
+    font-size: 1.3rem
+    position: fixed
+    right: 2rem
+    top: 2rem
+    background: transparent
+    border: none
+    color: $color_1
+
+    @media screen and (min-width: 768px)
+      font-size: 1.9rem
+      right: 4rem
+      top: 4rem
+
+    .fa-solid
+      color: $color_1
+    &:hover
+      color: $color_1
+      font-size: 1.33rem
+      cursor: pointer
+
+      @media screen and (min-width: 768px)
+        font-size: 2rem
+
+  section
+    display: flex
+    flex-direction: column
+    gap: 2rem
+    align-items: center
+    margin: 50%
+    perspective: 250px
+    width: 0
+
+    @media screen and (min-width: 768px)
+      gap: 3rem
+      margin: 18rem
+
+#slideshow7S
+  width: 15rem
+  height: 21rem
+  padding: 2rem
+  background-color: $color_2
+  border-radius: 25px
+  position: relative
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px
+  transform: rotateY(13deg)
+
+  @media screen and (min-width: 768px)
+    width: 22rem
+    height: 34rem
+    padding: 4rem
+    transform: rotateY(8deg)
+
+  .slide
+    position: relative
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    perspective: 250px
+
+    h2
+      font-size: 1.5rem
+      font-weight: 700
+      display: none
+      position: absolute
+      text-align: center
+      width: 100vw
+      color: $color_1
+      border-radius: 10%
+      padding: 0.5em
+      margin: 20.5rem 1rem 20.5rem 0
+      transform: rotate3d(1, 2, 0, -17deg)
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+      @media screen and (min-width: 768px)
+        margin: 34rem 10rem 34rem 9rem
+        font-size: 3rem
+        transform: rotate3d(1, 2, 0, -10deg)
+
+  img
+    display: none
+    width: 100%
+    height: 16rem
+    object-fit: cover
+    border-radius: 4rem
+    filter: grayscale(100%)
+
+    @media screen and (min-width: 768px)
+      width: 100%
+      height: 26rem
+      border-radius: 8rem
+
+  .img-show
+    display: block
+
+  .slideshow__move
+    position: absolute
+    transform: translateY(-50%)
+    padding: 5px
+    border-radius: 4px
+    transition: background-color 250ms
+
+    .fa-solid
+      color: $color_3
+
+      &:hover
+        color: $color_2
+        font-size: 1.1rem
+        cursor: pointer
+
+        @media screen and (min-width: 768px)
+          font-size: 1.7rem
+
+  #left
+    top: 92%
+    left: .9rem
+    @media screen and (min-width: 768px)
+      top: 94%
+      left: 2rem
+      font-size: 1.5rem
+
+  #right
+    top: 88%
+    right: .9rem
+    transform: scaleX(-1)
+    @media screen and (min-width: 768px)
+      top: 92%
+      right: 2rem
+      font-size: 1.5rem
+
+#pause
+  font-size: 1rem
+  padding: .3rem .3rem
+  width: 6rem
+  color: $color_3
+  background-color: $color_2
+  border: none
+  border-radius: 5px
+  z-index: 1
+  box-shadow: rgba(0, 0, 0, 0.3) -6px 9px 25px -6px
+  &:hover
+    color: $color_1
+    font-size: 1.1rem
+    cursor: pointer
+
+  @media screen and (min-width: 768px)
+    font-size: 1.6rem
+    width: 10rem
+    padding: .5rem
+    &:hover
+      font-size: 1.8rem
+
+.window
+  visibility: hidden
+  width: 1%
+  margin: 0rem 2rem 0rem 0rem
+
+  @media screen and (min-width: 768px)
+    visibility: visible
+    width: 20rem
+    height: 39rem
+    padding: 4rem
+    background-color: lightcoral
+    border-radius: 25px
+    position: relative
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px
+
+  &__right
+    margin: -90% 0rem 0rem 70%
+
+.title-show
+  display: block
