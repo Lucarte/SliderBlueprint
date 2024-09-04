@@ -1,11 +1,12 @@
 import { defineConfig } from "vite";
+import { resolve } from "path";
 
 export default defineConfig({
 	build: {
 		rollupOptions: {
 			input: {
-				main: "index.html", // Main entry point for Vite
-				slider: "public/slider.html", // Additional HTML entry point if needed
+				main: resolve(__dirname, "index.html"),
+				slider: resolve(__dirname, "slider.html"),
 			},
 		},
 	},
