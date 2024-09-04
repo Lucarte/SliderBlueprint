@@ -236,25 +236,30 @@ $background-color_1: black
         font-size: 2rem
         transition: 1s
       
-    
-  
-
   .span--punkt 
-    color: $color_3
-  
+    color: $color_3  
 
   .btn 
     text-decoration: none
-  
+
+  .peaks 
+    width: 83vw
+    background: #000
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+
+    .height 
+      padding: 7rem
+
+    @media (max-width: 768px) 
+      .peaks__span:hover:after 
+        display: none
 
   .peaks__span 
     font-size: 1.4rem
     position: relative
     cursor: pointer
-
-    &:hover span 
-      display: none
-    
 
     &:after 
       content: ''
@@ -300,27 +305,25 @@ $background-color_1: black
     &--kosciuszko:after 
       content: 'function Australia (KOSCIUSZKO) => () if click == (7): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence'
     
-  
+    // Media query for mobile to disable hover effect
+    @media (max-width: 768px)
+      .peaks__span:hover:after
+        display: none
 
-  .peaks 
-    width: 83vw
-    background: #000
-    display: flex
-    flex-wrap: wrap
-    justify-content: center
+  .mobile-content
+    display: none
 
-    .height 
-      padding: 7rem
+  .show-content .mobile-content
+    display: block  
+    font-size: 1rem
+    top: 100%
+    left: -3rem
+    min-width: 14rem
+    color: $color_2
+    line-height: 2rem
+    transition: all 1s ease 
 
-    @media (max-width: 768px) 
-      .peaks__span 
-        &:hover:after 
-          display: none
-        
       
-    
-  
-
 
 // ******************************************************************** ////////////////////////// ********************************************************************
 // ********************************************************************* // SLIDESHOW 7 SUMMITS// ************************************************************************

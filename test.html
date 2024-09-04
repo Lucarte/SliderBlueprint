@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Toggle Test</title>
+		<style>
+			.mobile-content {
+				display: none;
+				background-color: yellow; /* Only for debugging */
+				border: 1px solid red; /* Only for debugging */
+			}
+			.show-content .mobile-content {
+				display: block;
+				font-size: 1rem;
+				top: 100%;
+				left: -3rem;
+				min-width: 14rem;
+				color: burlywood;
+				line-height: 2rem;
+				transition: all 1s ease;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="peaks">
+			<span class="peaks__span" data-content="Sample content">Click me</span>
+		</div>
+
+		<script>
+			document.addEventListener("DOMContentLoaded", () => {
+				document.querySelectorAll(".peaks__span").forEach((item) => {
+					item.addEventListener("click", function () {
+						const message = this.getAttribute("data-content");
+						let mobileContent = this.querySelector(".mobile-content");
+						if (!mobileContent) {
+							mobileContent = document.createElement("div");
+							mobileContent.classList.add("mobile-content");
+							this.appendChild(mobileContent);
+						}
+						mobileContent.textContent = message;
+						this.classList.toggle("show-content");
+					});
+				});
+			});
+		</script>
+	</body>
+</html>

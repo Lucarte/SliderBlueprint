@@ -149,22 +149,3 @@ rightBtn.addEventListener("click", (e) => move(e));
 exitBtn.addEventListener("click", () => {
 	window.history.back();
 });
-
-// ******************************************************************** click on handy vs. hover on web ********************************************************************
-document.querySelectorAll(".peaks__span").forEach((span) => {
-	span.addEventListener("click", function () {
-		const isMobile = window.matchMedia("(max-width: 768px)").matches;
-
-		if (isMobile) {
-			const afterElement = this.querySelector("::after");
-			const content = this.getAttribute("data-content");
-
-			if (!this.classList.contains("active")) {
-				this.setAttribute("data-content", content);
-				this.classList.add("active");
-			} else {
-				this.classList.remove("active");
-			}
-		}
-	});
-});
