@@ -333,12 +333,15 @@ $background-color_1: black
   background-color: $color_2
   display: flex
   justify-content: center
+  align-items: center
+  height: 100vh
+  overflow: hidden
 
   #exitBtn
     font-size: 1.3rem
     position: fixed
-    right: 2rem
-    top: 2rem
+    right: 1.2rem
+    top: 1.7rem
     background: transparent
     border: none
     color: $color_1
@@ -361,19 +364,21 @@ $background-color_1: black
   section
     display: flex
     flex-direction: column
-    gap: 2rem
     align-items: center
-    margin: 50%
+    justify-content: center
+    gap: 2rem
     perspective: 250px
-    width: 0
+    margin: 5rem -2rem 0rem 0rem
 
     @media screen and (min-width: 768px)
       gap: 3rem
-      margin: 18rem
+      margin-top: 8rem
+      margin-right: 10rem
+      transform: rotateY(8deg) 
 
 #slideshow7S
-  width: 15rem
-  height: 21rem
+  width: 17rem
+  height: 25rem
   padding: 2rem
   background-color: $color_2
   border-radius: 25px
@@ -400,11 +405,10 @@ $background-color_1: black
       display: none
       position: absolute
       text-align: center
-      width: 100vw
       color: $color_1
       border-radius: 10%
       padding: 0.5em
-      margin: 20.5rem 1rem 20.5rem 0
+      margin: 0 1rem 25rem 0
       transform: rotate3d(1, 2, 0, -17deg)
       font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 
@@ -416,7 +420,7 @@ $background-color_1: black
   img
     display: none
     width: 100%
-    height: 16rem
+    height: 20rem
     object-fit: cover
     border-radius: 4rem
     filter: grayscale(100%)
