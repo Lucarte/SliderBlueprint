@@ -185,125 +185,142 @@ $color_2: lightcoral
 $color_3: whitesmoke
 $background-color_1: black
 
-.body-introSlider
+.body-introSlider 
   background-color: $background-color_1
   color: $color_1
   border: solid 1rem whitesmoke
-  margin: 3rem
-  padding: 2rem
+  margin: 1em
+  padding: .5em
   display: flex
   flex-direction: column
   align-items: center
   min-height: calc(100vh - 6rem)
-  width: calc(100% - 6rem)
-  @media screen and (min-width: 768px)
-    justify-content: flex-start
-    gap: 3rem
+  width: calc(100% - 2rem)
+
+  @media screen and (min-width: 768px) 
+    width: calc(100% - 6rem)
+    margin: 3rem
+    padding: 2rem 2rem 6rem
+    justify-content: space-around
     height: calc(100% - 6rem)
 
-  h2
+  h2 
     text-align: center
-    margin: 4rem
+    margin: 6rem 4rem 0
     color: $color_1
     font-size: 2rem
 
-    div
+    div 
       display: flex
       flex-wrap: wrap
       justify-content: center
       max-width: 4rem
-      @media screen and (min-width: 620px)
+
+      @media screen and (min-width: 620px) 
         max-width: none
-    &:hover
+
+    &:hover 
       color: $color_2
       transition: 1s
+    
 
-    .title__span
+    .title__span 
       color: $color_3
-      font-size: 1.3rem
+      font-size: 1.94rem
       margin-right: 10px
       margin-left: 10px
       text-decoration: underline
-      &:hover
+
+      &:hover 
         cursor: pointer
         font-size: 2rem
         transition: 1s
+      
+    
+  
 
-  .span--punkt
+  .span--punkt 
     color: $color_3
+  
 
-  .btn
+  .btn 
     text-decoration: none
+  
 
-    /* no me sirve la animacion para que aparezca despacio y cambie de color */
-  .peaks__span:hover
-    span
+  .peaks__span 
+    font-size: 1.4rem
+    position: relative
+    cursor: pointer
+
+    &:hover span 
       display: none
+    
 
-    &:hover:after
+    &:after 
+      content: ''
+      font-size: 1rem
+      display: none
+      position: absolute
+      top: 100%
+      left: -3rem
+      min-width: 14rem
       color: $color_2
       line-height: 2rem
-      transition-duration: 1s
+      transition: all 1s ease
+    
 
-  .peaks__span--everest
-    &:hover
-      &:after
-        display: flex
-        max-width: 14rem
-        content: 'function Asia (EVEREST) => () if click == (1): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence'
-        transition-duration: 2s
+    &:hover:after 
+      display: flex
+    
+    
+    &--everest:after 
+      content: 'function Asia (EVEREST) => () if click == (1): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence'
+    
 
-  .peaks__span--aconcagua
-    &:hover
-      &:after
-        display: flex
-        max-width: 14rem
-        content: 'function South America (ACONCAGUA) => () if click == (2): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence '
+    &--aconcagua:after 
+      content: 'function South America (ACONCAGUA) => () if click == (2): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence'
+    
 
-  .peaks__span--denali
-    &:hover
-      &:after
-        display: flex
-        max-width: 14rem
-        content: 'function North America (DENALI) => () if click == (3): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence '
+    &--denali:after 
+      content: 'function North America (DENALI) => () if click == (3): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence'
+    
 
-  .peaks__span--elbrus
-    &:hover
-      &:after
-        display: flex
-        max-width: 14rem
-        content: 'function Europe (ELBRUS) => () if click == (4): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence '
+    &--elbrus:after 
+      content: 'function Europe (ELBRUS) => () if click == (4): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence'
+    
 
-  .peaks__span--kili
-    &:hover
-      &:after
-        display: flex
-        max-width: 14rem
-        content: 'function Africa (KILIMANJARO) => () if click == (5): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence '
+    &--kili:after 
+      content: 'function Africa (KILIMANJARO) => () if click == (5): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence'
+    
 
-  .peaks__span--vinson
-    &:hover
-      &:after
-        display: flex
-        max-width: 14rem
-        content: 'function Antarctic (VINSON) => () if click == (6): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence '
+    &--vinson:after 
+      content: 'function Antarctic (VINSON) => () if click == (6): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence'
+    
 
-  .peaks__span--kosciuszko
-    &:hover
-      &:after
-        display: flex
-        max-width: 14rem
-        content: 'function Australia (KOSCIUSZKO) => () if click == (7): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence '
+    &--kosciuszko:after 
+      content: 'function Australia (KOSCIUSZKO) => () if click == (7): see my picture, else if, tired of surfing == go climbing, else, !action === !consequence'
+    
+  
 
-  .peaks
-    width: calc(100vw - 8rem)
+  .peaks 
+    width: 83vw
     background: #000
     display: flex
     flex-wrap: wrap
     justify-content: center
 
-    .height
-      padding: 5rem
+    .height 
+      padding: 7rem
+
+    @media (max-width: 768px) 
+      .peaks__span 
+        &:hover:after 
+          display: none
+        
+      
+    
+  
+
 
 // ******************************************************************** ////////////////////////// ********************************************************************
 // ********************************************************************* // SLIDESHOW 7 SUMMITS// ************************************************************************
